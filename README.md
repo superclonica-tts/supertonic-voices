@@ -41,7 +41,23 @@ Every voice speaks all 31 languages of Supertonic 3. **Listen on one page: https
 Voiced with the SuperClonica engine on a CPU, without editing; texts and seeds are in
 [`samples/samples.json`](samples/samples.json).
 
-## Use a voice
+## Use these voices through an API
+
+No install needed: every voice here, and every other voice in the catalog, works through the
+**[SuperClonica speech API](https://superclonica.com/en/speech-api?utm_source=github&utm_medium=supertonic-voices)** by its ID, the free key included
+(1 minute of audio a day, no card). Plans from **$5 a month** give up to **216 hours** of audio, about $0.023 per hour,
+streamed from about 300 ms ([prices compared](https://superclonica.com/en/guides/text-to-speech-api-pricing?utm_source=github&utm_medium=supertonic-voices)).
+
+```bash
+curl --fail-with-body -o ciri.ogg https://superclonica.com/api/v1/speech \
+  -H "Authorization: Bearer $SUPERCLONICA_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Hello! This is Ciri through the API.", "voice": "49cd4d119695528694fac0a1b9fb58a8", "language": "en"}'
+```
+
+The ID of each voice is on its page (the "page" links in the table), under "Through the API".
+
+## Use a voice offline
 
 Install one engine package (not both):
 
@@ -74,7 +90,7 @@ Supertonic 3 voice styles, so they also work with the official Supertonic 3 code
 ## Get more voices
 
 These are the free ones; all free voices, with demos and an online phrase test, are also on [superclonica.com/voices/free](https://superclonica.com/en/voices/free?utm_source=github&utm_medium=supertonic-voices). The **[SuperClonica voice marketplace](https://superclonica.com/en/explore?utm_source=github&utm_medium=supertonic-voices)**
-has 170+ voices in the same format:
+has 190 voices in the same format, and every one of them works through the speech API:
 
 - **Characters and narrators** – [game characters](https://superclonica.com/en/voices/game-characters?utm_source=github&utm_medium=supertonic-voices),
   [cartoons](https://superclonica.com/en/voices/cartoons?utm_source=github&utm_medium=supertonic-voices), [anime](https://superclonica.com/en/voices/anime?utm_source=github&utm_medium=supertonic-voices),
@@ -99,5 +115,8 @@ has 170+ voices in the same format:
 
 Бесплатные голоса для Supertonic 3: JSON-файл голоса и демо. Работают офлайн на процессоре или
 видеокарте, с обычным Supertonic 3 или с движком SuperClonica (`pip install superclonica-cpu`).
-Послушать все голоса: https://superclonica.github.io/supertonic-voices/. Больше голосов (170+), озвучка своей фразы онлайн, заказ голоса по
+Послушать все голоса: https://superclonica.github.io/supertonic-voices/. Больше голосов (190), озвучка своей фразы онлайн, заказ голоса по
 вашей записи и бесплатное обучение своего голоса — на [superclonica.com](https://superclonica.com/ru/explore?utm_source=github&utm_medium=supertonic-voices).
+
+Все эти голоса и любой голос каталога работают через [API озвучки](https://superclonica.com/ru/speech-api?utm_source=github&utm_medium=supertonic-voices) по своему ID —
+даже на бесплатном ключе (минута звука в день без карты); тарифы от $5 в месяц за до 216 часов звука.
