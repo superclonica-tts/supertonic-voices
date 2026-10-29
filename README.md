@@ -45,7 +45,7 @@ Voiced with the SuperClonica engine on a CPU, without editing; texts and seeds a
 
 No install needed: every voice here, and every other voice in the catalog, works through the
 **[SuperClonica speech API](https://superclonica.com/en/speech-api?utm_source=github&utm_medium=supertonic-voices)** by its ID, the free key included
-(1 minute of audio a day, no card). Plans from **$5 a month** give up to **216 hours** of audio, about $0.023 per hour,
+(3 minutes of audio a day, no card). Plans from **$5 a month** give up to **216 hours** of audio, about $0.023 per hour,
 streamed from about 300 ms ([prices compared](https://superclonica.com/en/guides/text-to-speech-api-pricing?utm_source=github&utm_medium=supertonic-voices)).
 
 ```bash
